@@ -43,22 +43,40 @@
         
 
         <!--This is our contact form, allowing or clients to in touch with us, whether they have questions, need a quote, or want to report an issue-->
-        <div align="center">
-<form action="mailto:" method="post" enctype="text/plain">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br>
-    
-    <label for="Cellphone">Cellphone:</label><br>
-    <input type="tel" id="Cellphone" name="Cellphone"><br>
+<h2>Contact Form</h2>
+<form action="submit_form.php" method="post">
+    <label for="Name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="Surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required><br><br>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
-    
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message"></textarea><br>
-    <input type="submit" value="Send">
-    </form>
-    </div>
+    <label for="Email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="Phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <!-- Allows users to select the type of service they require -->
+    <label for="Type of Service">Type of Service:</label>
+    <select id="service" name="service" required>
+        <option value="">Select a service</option>
+        <option value="Enquiry">Enquiry</option>
+        <option value="Residential">Residential Electrical Services</option>
+        <option value="Commercial">Commercial Electrical Services</option>
+        <option value="Repairs">Electrical Repairs and Fault Finding</option>
+        <option value="Lighting">Lighting Installations</option>
+        <option value="Maintenance">Electrical Maintenance</option>
+        <option value="Db_board">DB Board Installations and Upgrades</option>
+        <option value="Wiring">Wiring and Rewiring</option>
+        <option value="Inspections">Electrical Inspections and Testing</option>
+        <option value="Solar">Solar Panel Installations and Maintenance</option>
+    </select><br><br>
+
+    <label for="Message">Message:</label><br>
+    <textarea id="Message" name="Message"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
 
     <div align="center">
         <h1>Contact Information</h1>
