@@ -5,3 +5,7 @@ Screenshots displaying website responsiveness on different screens. (Tablet, Mob
 Added additional content and removed some of the content that was on the website and replaced it with different one.
 Created an external style.css file. The file allowed for the improvement of the website and providing the ability to customize the site using one set of code rather than type multiple codes..
 Used codes such as .nav:hover, Family-Font, Form and img just to name a few
+updated form HTML and improved it using css
+Site map added
+
+<img width="256" height="130" alt="image" src="https://github.com/user-attachments/assets/5b37f0fe-6844-47fe-ba45-d82083f0b68b" />
