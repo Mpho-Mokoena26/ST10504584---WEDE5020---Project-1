@@ -227,11 +227,11 @@ h3 {
     gap: 55px;
 }
 
-.solar-image img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
+.solar-img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 350px;
 }
 
 .solar-text p {
