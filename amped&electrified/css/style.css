@@ -347,6 +347,148 @@ h3 {
     font-size: 0.9rem;
 }
 
+/* Request a Quote section */
+.form-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.form-intro h1 {
+    margin-bottom: 15px;
+}
+
+.form-intro p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Form container */
+.quote-form-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    padding: 35px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+}
+
+/* Two-column form layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+/* Form labels */
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.contact-form label span,
+.form-note span {
+    color: #c62828;
+}
+
+/* Input fields, dropdown and message box */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5df;
+    border-radius: 6px;
+    background-color: #f9fbfd;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.contact-form input,
+.contact-form select {
+    min-height: 48px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.15);
+}
+
+/* Required-field note */
+.form-note {
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Submit button */
+.contact-form .form-submit {
+    width: 100%;
+    min-height: 50px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact-form .form-submit:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-full {
+        grid-column: auto;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+}
+
 /* 11. Keyboard Accessibility */
 a:focus-visible {
     outline: 3px solid var(--secondary-color);
@@ -391,6 +533,13 @@ a:focus-visible {
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
+
+form {
+    padding: 20px;
+    border-radius: 0.5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 /* 13. Mobile Layout */
