@@ -7,20 +7,20 @@
 
     <!-- This is the link to the CSS file that will style the website. Which allows us to control the appearance and layout of the HTML elements -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
-
 <header class ="site-header">
-    <div class="container header-content">
-    
+    <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Amped and Electrified home"></a>
     <a href="index.html" class="logo">
-        <img src="images/Logo.jpg" alt="Amped and Electrified Logo" width="200" height="100">
+        <span class="brand-text">Amped <span>&amp;</span> Electrified<small>POWERING YOUR POSSIBILITIES</small></span>
     </a>
 
      <!-- This is the navigation bar, it will allow us to navigate the site with ease. This will help avoid confusion and prevent users from getting frustrated. -->
-<nav class="main-nav" id="main-navigation" aria-label="Main Navigation">
+<nav class="main-nav" aria-label="Main Navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services and Products</a>
@@ -39,6 +39,7 @@
                      Welcome to Amped &amp; Electrified!
         </h2>
     </div>
+
 
     <section class="hero">
         <div class="container hero-content">
