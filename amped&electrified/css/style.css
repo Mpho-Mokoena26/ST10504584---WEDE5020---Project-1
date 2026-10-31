@@ -336,7 +336,7 @@ h3 {
 }
 
 .cta-section p {
-    color: #dce5ef;
+    color: #e2810b;
     margin-bottom: 25px;
 }
 
@@ -369,108 +369,156 @@ h3 {
     line-height: 1.7;
 }
 
-/* Form container */
-.quote-form-container {
+form {
     max-width: 850px;
-    margin: 0 auto;
-}
-
-.contact-form {
+    margin: 40px auto;
     padding: 35px;
-    background: var(--light-color);
-    border: 1px solid var(--border);
+    background: #01193a;
     border-radius: 12px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+    border-top: 5px solid #f5a623;
 }
 
-.contact-form h2 {
-    margin-bottom: 25px;
-}
+/* Form grid layout */
 
-/* Two-column form layout */
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    min-width: 0;
 }
 
 .form-full {
     grid-column: 1 / -1;
 }
 
-/* Form labels */
-.contact-form label {
+/* Labels */
+
+.form-group label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #d5c8c8;
     margin-bottom: 8px;
-    font-weight: 700;
-    color: var(--primary);
 }
 
-.contact-form label span,
+.form-group label span,
 .form-note span {
-    color: #c62828;
+    color: #e63946;
+    font-weight: bold;
 }
 
-/* Input fields, dropdown and message box */
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+/* Input fields */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
-    padding: 13px 14px;
-    border: 1px solid #cbd5df;
+    padding: 13px 15px;
+    border: 1px solid #cccccc;
     border-radius: 6px;
-    background-color: #f9fbfd;
-    color: var(--text);
-    font: inherit;
-    font-size: 0.95rem;
+    background: #f9f9f9;
+    font-family: inherit;
+    font-size: 14px;
+    color: #333333;
+    transition: all 0.3s ease;
     box-sizing: border-box;
-    transition: border-color 0.2s ease,
-                box-shadow 0.2s ease;
 }
 
-.contact-form input,
-.contact-form select {
-    min-height: 48px;
-}
+/* Focus effects */
 
-.contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
-    border-color: var(--secondary);
-    background-color: var(--white);
-    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.15);
+    border-color: #f5a623;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.18);
 }
 
-/* Required-field note */
-.form-note {
-    margin: 20px 0;
-    color: var(--muted);
-    font-size: 0.9rem;
+/* Placeholder text */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999999;
 }
 
-/* Submit button */
-.contact-form .form-submit {
-    width: 100%;
-    min-height: 50px;
-    font: inherit;
-    font-weight: 700;
+/* Textarea */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Select dropdown */
+
+.form-group select {
     cursor: pointer;
 }
 
-.contact-form .form-submit:hover {
-    background-color: var(--secondary);
-    color: var(--white);
+/* Validation feedback */
+
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+.form-group input:valid {
+    border-color: #28a745;
+}
+
+.field-error {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Form note */
+
+.form-note {
+    font-size: 13px;
+    color: #666666;
+    margin: 20px 0;
+}
+
+/* Submit button */
+
+.form-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 20px;
+    background: #f5a623;
+    color: #111111;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+
+.form-submit:hover {
+    background: #222222;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button click effect */
+
+.form-submit:active {
+    transform: translateY(0);
+}
+
+/* Keyboard accessibility */
+
+.form-submit:focus-visible {
+    outline: 3px solid #f5a623;
+    outline-offset: 3px;
 }
 
 /* Responsive design for mobile devices */
@@ -701,4 +749,25 @@ form {
     gap: 28px;
 }
 
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #ea9d04; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50%; /* Make it circular */
+  font-size: 18px; /* Increase font size */
+  width: 50px;
+  height: 50px;
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transitions */
+}
 
+#backToTopBtn:hover {
+  background-color: #d1c2ae; /* Darker background on hover */
+}
